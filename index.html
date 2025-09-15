@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beranda — XIII</title>
+
+  <!-- CSS EMBED (aman untuk Win7/Chrome lama) -->
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;padding:16px;font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#222}
+    header,main,footer{max-width:920px;margin:0 auto;padding:16px}
+    nav ul{list-style:none;margin:8px 0 0;padding:0;display:flex;gap:12px}
+    nav a{text-decoration:none;color:#0a66c2} nav a:hover{text-decoration:underline}
+    #hero{background:#f7f7ff;border:1px solid #ececff;padding:24px;border-radius:8px}
+    .btn{display:inline-block;padding:10px 16px;background:#0a66c2;color:#fff;text-decoration:none;border-radius:8px}
+    .btn:hover{opacity:.9}
+    .kartu{display:inline-block;width:220px;margin:8px;border:1px solid #e5e5e5;border-radius:8px;padding:8px;background:#fff;vertical-align:top}
+    .kartu img{display:block;width:100%;height:auto}
+
+    /* TABEL */
+    .tabel-harga{border-collapse:collapse;width:100%;max-width:920px;border:1px solid #bbb}
+    .tabel-harga caption{text-align:left;font-weight:600;margin:8px 0}
+    .tabel-harga th,.tabel-harga td{border:1px solid #bbb;padding:8px;text-align:left}
+    .tabel-harga thead th{background:#f5f5f5}
+    .tabel-harga tbody tr:nth-child(odd){background:#fafafa}
+
+    footer{border-top:1px solid #ddd;text-align:center;color:#666}
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>XIII</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="pages/tentang.html">Tentang</a></li>
+        <li><a href="pages/kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="hero">
+      <h2>Tempat Baca Light Novel Gratis</h2>
+      <p>Koleksi rapi, update rutin, tanpa ribet.</p>
+      <p><a class="btn" href="pages/kontak.html">Hubungi Kami</a></p>
+    </section>
+
+    <section id="beranda">
+      <h2>Beranda</h2>
+      <article id="profil">
+        <h3>Profil</h3>
+        <p>Tempat Baca Light Novel Gratis.</p>
+      </article>
+    </section>
+
+    <section id="galeri">
+      <h2>Galeri</h2>
+      <figure class="kartu">
+        <img src="img/foto1.png" alt="Produk A" width="240">
+        <figcaption>Produk A — best seller</figcaption>
+      </figure>
+      <figure class="kartu">
+        <img src="img/foto2.png" alt="Produk B" width="240">
+        <figcaption>Produk B — varian baru</figcaption>
+      </figure>
+      <figure class="kartu">
+        <img src="img/foto3.png" alt="Produk C" width="240">
+        <figcaption>Produk C — edisi terbatas</figcaption>
+      </figure>
+    </section>
+
+    <section id="tabel">
+      <h2>Daftar Harga</h2>
+      <table class="tabel-harga">
+        <caption>Harga produk per September 2025</caption>
+        <thead>
+          <tr>
+            <th scope="col">Produk</th>
+            <th scope="col">Kategori</th>
+            <th scope="col">Harga</th>
+            <th scope="col">Stok</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Produk A</th><td>Elektronik</td><td>Rp 120.000</td><td>Ready</td></tr>
+          <tr><th scope="row">Produk B</th><td>Aksesoris</td><td>Rp 90.000</td><td>Terbatas</td></tr>
+          <tr><th scope="row">Produk C</th><td>Elektronik</td><td>Rp 150.000</td><td>Pre-order</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="4">Harga dapat berubah sewaktu-waktu.</td></tr></tfoot>
+      </table>
+    </section>
+
+    <section id="audio">
+      <h2>Contoh Audio</h2>
+      <audio controls>
+        <source src="media/beep.wav" type="audio/wav">
+        Browser kamu tidak mendukung tag audio.
+      </audio>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 XIII</small> · <a href="#top">Kembali ke atas</a>
+  </footer>
+</body>
+</html>
