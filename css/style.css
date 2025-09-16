@@ -5,6 +5,7 @@ body::after{
   background:#ffea8a; border:1px solid #e5c100; padding:3px 6px;
   font:12px/1 Arial, Helvetica, sans-serif; color:#333; z-index:99999;
 }
+html{scroll-behavior:smooth}
 
 /* Tabel (minimal, anti-gagal) */
 .tabel-harga{border-collapse:collapse;width:100%;max-width:920px;border:1px solid #bbb}
