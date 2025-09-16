@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>kontak</title>
+</head>
+<body>
+  <header>
+    <h1>Form kontak</h1>
+    <p><a href="../index.html">? Kembali ke beranda</a></p>
+  </header>
+
+  <!-- method="get" + action ke thanks.html supaya bisa dites offline -->
+  <form action="thanks.html" method="get" novalidate>
+    <fieldset>
+      <legend>Kontak</legend>
+
+      <label for="nama">Nama</label><br>
+      <input id="nama" name="nama" type="text" placeholder="Nama lengkap" required minlength="3" maxlength="60"><br><br>
+
+      <label for="email">Email</label><br>
+      <input id="email" name="email" type="email" placeholder="nama@contoh.com" required autocomplete="email"><br><br>
+
+      <label for="telp">No. HP</label><br>
+      <input id="telp" name="telp" type="tel" placeholder="08xxxxxxxxxx"
+             pattern="^08[0-9]{8,11}$" title="Harus mulai 08 dan 10–13 digit angka"><br><br>
+
+      <label for="tgl">Tanggal</label><br>
+      <input id="tgl" name="tgl" type="date"><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferensi</legend>
+
+      <label for="topik">Topik</label><br>
+      <select id="topik" name="topik" required>
+        <option value="">-- Pilih --</option>
+        <option>Kerja sama</option>
+        <option>Support</option>
+        <option>Masukan</option>
+      </select><br><br>
+
+      <span>Metode kontak balik:</span><br>
+      <label><input type="radio" name="metode" value="email" required> Email</label>
+      <label><input type="radio" name="metode" value="wa"> WhatsApp</label><br><br>
+
+      <label><input type="checkbox" name="subscribe" value="1"> Beri saya update via email</label><br><br>
+    </fieldset>
+
+    <label for="pesan">Pesan</label><br>
+    <textarea id="pesan" name="pesan" rows="5" cols="40" placeholder="Tulis pesan di sini..." required></textarea><br><br>
+
+    <label><input type="checkbox" name="setuju" required> Saya setuju dengan ketentuan</label><br><br>
+
+    <button type="submit">Kirim</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <p><small>Catatan: di browser sangat lama (mis. IE lawas), tipe input seperti <code>email</code>/<code>date</code> mungkin tampil seperti teks biasa. Pakai Chrome/Firefox untuk melihat validasi HTML5.</small></p>
+</body>
+</html>
