@@ -12,3 +12,21 @@ html{scroll-behavior:smooth}
 .tabel-harga th,.tabel-harga td{border:1px solid #bbb;padding:8px;text-align:left}
 .tabel-harga thead th{background:#f5f5f5}
 .tabel-harga caption{text-align:left;font-weight:600;margin:8px 0}
+
+.kartu{
+  border:1px solid #e5e5e5; border-radius:10px; background:#fff;
+  padding:10px; width:220px; /* lebar minimum kartu */
+}
+.kartu-list{
+  display:flex; flex-wrap:wrap; gap:16px;
+}
+.kartu img{ width:100%; height:auto; display:block; }
+
+.harga-layout{ display:flex; gap:20px; align-items:flex-start; }
+.harga-kiri{ flex: 1 1 240px; }
+.harga-kanan{ flex: 2 1 420px; }
+
+/* Mobile: tumpuk vertikal */
+@media (max-width:700px){
+  .harga-layout{ flex-direction:column; }
+}
