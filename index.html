@@ -38,6 +38,26 @@
     .tabel-harga tbody tr:nth-child(odd){background:#fafafa}
 
     footer{border-top:1px solid #ddd;text-align:center;color:#666}
+    /* NAV: susun horizontal, rapi di tengah & responsif */
+nav ul{
+  list-style:none; margin:8px 0 0; padding:0;
+  display:flex; gap:16px; flex-wrap:wrap;
+  align-items:center;
+}
+nav a{ text-decoration:none; color:#0a66c2; }
+nav a:hover{ text-decoration:underline; }
+#hero{
+  background:#f7f7ff; border:1px solid #ececff; border-radius:12px;
+  padding:24px;
+  display:flex;              /* jadikan flex container */
+  flex-direction:column;     /* judul → paragraf → tombol (vertikal) */
+  gap:12px;
+  align-items:flex-start;    /* rata kiri (ganti ke center kalau mau di tengah) */
+}
+@media (min-width: 720px){
+  #hero{ flex-direction:row; align-items:center; justify-content:space-between; }
+}
+
   </style>
 </head>
 <body>
@@ -84,6 +104,11 @@
       </figure>
     </section>
 
+    <section id="galeri" class="kartu-list">
+  <h2>Galeri</h2>
+  <!-- figure.kartu ... -->
+</section>
+
     <section id="tabel">
       <h2>Daftar Harga</h2>
       <table class="tabel-harga">
@@ -113,6 +138,19 @@
       </audio>
     </section>
   </main>
+<section id="harga">
+  <div class="harga-layout">
+    <div class="harga-kiri">
+      <!-- taruh deskripsi singkat, CTA, dll -->
+      <h2>Daftar Harga</h2>
+      <p>Pilihan terbaik buatmu.</p>
+    </div>
+    <div class="harga-kanan">
+      <!-- tabel yang sudah ada -->
+      <table class="tabel-harga"> ... </table>
+    </div>
+  </div>
+</section>
 
   <footer>
     <small>© 2025 XIII</small> · <a href="#top">Kembali ke atas</a>
