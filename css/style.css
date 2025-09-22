@@ -35,3 +35,15 @@ html{scroll-behavior:smooth}
 .container{ align-items:center; }            /* sejajar vertikal (sumbu silang) */
 .item{ flex: 1 1 240px; }                    /* tumbuh, menyusut, lebar dasar */
 .item-fixed{ flex: 0 0 200px; }              /* lebar tetap 200px */
+
+html { scroll-behavior: smooth; }
+#hero .btn:hover { transform: translateY(-2px); }
+/* rapikan jarak global */
+section { margin-block: 24px; }
+
+/* galeri: flex wrap */
+.kartu-list { display:flex; flex-wrap:wrap; gap:16px; }
+.kartu     { flex: 1 1 220px; max-width: 280px; }
+@media (max-width:600px){
+  .kartu { flex-basis: 100%; max-width: none; }
+}
