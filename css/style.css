@@ -47,3 +47,63 @@ section { margin-block: 24px; }
 @media (max-width:600px){
   .kartu { flex-basis: 100%; max-width: none; }
 }
+/* NAV */
+nav ul{
+  list-style:none; margin:8px 0 0; padding:0;
+  display:flex; gap:16px;
+  flex-wrap:wrap;             /* boleh turun baris */
+  align-items:center;         /* vertikal tengah (cross axis) */
+}
+nav a{ text-decoration:none; color:#0a66c2; padding:6px 8px; border-radius:8px; }
+nav a:hover{ background:#eef5ff; }
+/* HERO layout */
+#hero{
+  display:flex; gap:16px;
+  align-items:center;               /* sejajarkan vertikal */
+  justify-content:space-between;    /* sebar judul+teks vs tombol */
+  flex-wrap:wrap;                   /* kalau sempit, elemen boleh turun */
+}
+#hero h2{ margin:0; }
+#hero .btn{ align-self:flex-start; } /* tombol nempel kiri pada mobile */
+
+/* Mobile: tumpuk vertikal */
+@media (max-width:720px){
+  #hero{
+    flex-direction:column;          /* judul → teks → tombol */
+    align-items:flex-start;         /* rata kiri */
+  }
+}
+/* KARTU GALERI */
+.kartu-list{
+  display:flex;
+  flex-wrap:wrap;     /* boleh turun baris */
+  gap:16px;
+}
+.kartu{
+  flex: 1 1 240px;    /* grow=1, shrink=1, basis=240px → minimal 240, sisanya elastis */
+  max-width: 320px;   /* biar tidak terlalu lebar di desktop */
+  display:flex;       /* trik equal-height */
+  flex-direction:column;
+  border:1px solid #e5e5e5; border-radius:10px; background:#fff; padding:10px;
+}
+.kartu img{ width:100%; height:auto; display:block; border-radius:8px; }
+.kartu figcaption{ margin-top:auto; } /* dorong caption ke bawah → tinggi kartu konsisten */
+.harga-layout{ display:flex; gap:20px; align-items:flex-start; }
+.harga-kiri{  flex: 1 1 240px; }
+.harga-kanan{ flex: 2 1 420px; overflow:auto; } /* kalau tabel melebar, bisa di-scroll */
+
+/* Mobile */
+@media (max-width:700px){
+  .harga-layout{ flex-direction:column; }
+}
+/* Helper kelas kecil */
+.flex        { display:flex; }
+.flex-col    { flex-direction:column; }
+.flex-wrap   { flex-wrap:wrap; }
+.items-center{ align-items:center; }
+.just-between{ justify-content:space-between; }
+.gap-16      { gap:16px; }
+
+/* Contoh pakai di HTML:
+<div class="flex flex-wrap gap-16"> ... </div>
+*/
